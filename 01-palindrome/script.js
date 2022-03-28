@@ -14,7 +14,8 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    str = str.toLowerCase().replace(/[^a-zа-яё]/gi, '');
+    return str === str.split('').reverse().join('');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
@@ -30,5 +31,4 @@ console.log(palindrome('привет')); // false
  * palindrome('О, лета тело!'); // true
  * 
 */
-
-TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+console.log(palindrome('О, лета тело!'));//=)
